@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p,
+        ul {
+            height: 0px;
+            margin: 0;
+            overflow: hidden;
+            transition: all .3s ease .15s;
+        }
+
+        .title {
+            font-weight: bold;
+            color: blue;
+            cursor: pointer;
+        }
+
+        .title:after {
+            content: '+';
+            padding-left: 5px;
+            font-size: 20px;
+            color: blue;
+        }
+
+        .title.open:after {
+            content: '-';
+        }
+
+        ul.open {
+            height: auto;
+        }
+
+        p.open {
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="books" class="menu">
+        <div class="title">Books</div>
+        <ul>
+            <li>
+                <div class="title">Book 1</div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quos?</p>
+            </li>
+            <li>
+                <div class="title">Book 2</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, cum.</p>
+            </li>
+            <li>
+                <div class="title">Book 3</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, a.</p>
+            </li>
+            <li>
+                <div class="title">Book 4</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, aliquam?</p>
+            </li>
+            <li>
+                <div class="title">Book 5</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, natus!</p>
+            </li>
+        </ul>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

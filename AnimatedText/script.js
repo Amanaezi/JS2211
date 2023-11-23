@@ -7,7 +7,10 @@ const colors = [
   "#00ffff",
 ];
 
+let timer = null;
+
 function addText(id, text) {
+  clearInterval(timer);
   let elem = document.getElementById(id);
   let pos = 0;
 
@@ -24,7 +27,7 @@ function addText(id, text) {
     }
   }
 
-  let timer = setInterval(addLetter, 1000);
+  timer = setInterval(addLetter, 100);
 }
 
 function addRandomWord() {
@@ -34,6 +37,7 @@ function addRandomWord() {
 }
 
 function removeText(id) {
+  clearInterval(timer);
   let elem = document.getElementById(id);
   elem.innerHTML = "";
 }
